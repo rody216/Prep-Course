@@ -141,20 +141,12 @@ function esPrimo(numero) {
   // }
   // return true;
   
-  let primo = 0
-  if (numero == 0 || numero == 1){
-      return false
+  
+  if (numero === 0 || numero === 1) return false
+  for (let i = 2; i < numero; i++){
+    if (numero % i === 0) return false;
   }
-  for (let i = 0; i<=numero; i++){
-      if(numero % i == 0){
-          primo+=1
-      }
-  }
-  if(primo>2){
-      return false
-  }else{
-      return true
-  } 
+  return true; 
   
 }
 
@@ -171,8 +163,8 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí 
    
-  let tabla = [0]
-  for (let i = 1; i <= 10; i++){
+  var tabla = [];
+  for (let i = 0; i <= 10; i++){
     tabla.push(6 * i) 
   }
   return tabla;
